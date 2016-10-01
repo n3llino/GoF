@@ -13,6 +13,16 @@ public class Context {
 
 	private Strategy strategy;
 
+	public Context() {
+		super();
+		this.strategy = new ConcreteStrategyC();
+	}
+
+	public Context(Strategy strategy) {
+		super();
+		this.strategy = strategy;
+	}
+
 	public void letsDoIt() {
 		strategy.algorithm(this);
 	}
@@ -23,5 +33,13 @@ public class Context {
 
 	public Set<Number> getSetOfNumbers() {
 		return setOfNumbers;
+	}
+
+	public void setListOfNames(List<String> listOfNames) {
+		this.listOfNames = listOfNames;
+	}
+
+	public void setSetOfNumbers(Set<Number> setOfNumbers) {
+		this.setOfNumbers = setOfNumbers;
 	}
 }
